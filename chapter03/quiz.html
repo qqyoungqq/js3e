@@ -5,7 +5,22 @@
 <title>A Simple Quiz</title>
 <link href="../_css/site.css" rel="stylesheet">
 <script>
-
+  function askQuestion(ques) {
+    if (prompt(ques[0],'') == ques[1]) {
+      alert('correct !');
+      score++;
+    } else {
+      alert('wrong. The correct answer is ' + ques[1]);
+    }
+  }
+  var score = 0;
+  var question = [ ['How many moons does Earth have?',1],
+    ['How many moons does Saturn have?',31],
+    ['How many moons does Venus have?',0]
+  ];
+  for (var i=0, len=question.length; i<len; i++) {
+    askQuestion(question[i]);
+  }
 </script>
 </head>
 
@@ -18,7 +33,7 @@
     <div class="main">
       <h1>A Simple Quiz</h1>
       <script>
-		
+      document.write('<p> You got ' + score + ' out of ' + question.length + ' questions correct.</p>');
 		</script>
       </div>
   </div>
