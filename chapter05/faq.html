@@ -20,6 +20,17 @@ h2.close {
 </style>
 <script>
 $(document).ready(function() {
+  $('.answer').hide();
+  $('h2').click(function() {
+    var $answer = $(this).next('.answer');
+    if ($answer.is(':hidden')) {
+      $answer.slideDown();
+      $(this).addClass('close');
+    } else {
+      $answer.hide();
+      $(this).removeClass('close');
+    }
+  }); // end click
 
 }); // end ready
 </script>
