@@ -9,7 +9,9 @@
 <script src="../_js/jquery-ui.min.js"></script>
 <script>
 $(document).ready(function() {
-  
+	$('#contact').tooltip({
+		content: $('#contactInfo').html(),
+	}); // end tooltip  
 }); // end ready
 </script>>
 </head>
@@ -32,6 +34,9 @@ $(document).ready(function() {
 	</footer>
 </div>
 <!-- put template here -->
-
+<script id="contactInfo" type="text/template">
+	<p>You can reach us at 555-555-5555</p>
+	<p><img src="images/map.png" title="I am a map!"</p>
+</script>
 </body>
 </html>

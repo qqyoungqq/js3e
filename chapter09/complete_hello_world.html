@@ -9,7 +9,12 @@
 <script src="../_js/jquery-ui.min.js"></script>
 <script>
 $(document).ready(function() {
-  $('#hello').dialog();
+  $('#hello').dialog({
+  	modal: true,
+  	resizable: false,
+  	draggable: false,
+  	hide: 'explode'
+  });
 }); // end ready
 </script>>
 </head>
